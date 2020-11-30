@@ -31,7 +31,7 @@ PIN = 17
 GPIO.setup(PIN, GPIO.IN)
 
 GPIO.add_event_detect(PIN, GPIO.BOTH, bouncetime=300)
-GPIO.add_event_callback(PIN, send_text)
+GPIO.add_event_callback(PIN, check_moist)
 
 while True:
     time.sleep(1)
